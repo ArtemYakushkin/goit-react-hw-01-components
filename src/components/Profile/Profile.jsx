@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+// import user from "./Profile/user";
 import { CardUser, InfoUser, ImgUser, NameUser, TagUser, LocationUser, StatsList, StatsItem, StatsСategory, StatsNumber } from './Profile.styled';
 
 export const Profile = ({ user }) => {
@@ -30,9 +31,11 @@ export const Profile = ({ user }) => {
 };
 
 Profile.propTypes = {
-    name: PropTypes.string.isRequired,
-    tag: PropTypes.string.isRequired,
-    location: PropTypes.string.isRequired,
-    avatar: PropTypes.string.isRequired,
-    stats: PropTypes.object.isRequired,
+    user: PropTypes.shape({
+        username: PropTypes.string.isRequired,
+        tag: PropTypes.string.isRequired,
+        location: PropTypes.string.isRequired,
+        avatar: PropTypes.string.isRequired,
+        stats: PropTypes.object.isRequired
+    }).isRequired,
 };

@@ -21,11 +21,12 @@ export const Statistics = ({ title, stats }) => {
             </StatList>
         </StatSection>
     );
-}
+};
 
 Statistics.propTypes = {
-    title: PropTypes.string.isRequired,
-    id: PropTypes.string.isRequired,
-    label: PropTypes.string.isRequired,
-    percentage: PropTypes.number.isRequired,
+    stats: PropTypes.arrayOf(PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        label: PropTypes.string.isRequired,
+        percentage: PropTypes.number.isRequired,
+    }))
 };
