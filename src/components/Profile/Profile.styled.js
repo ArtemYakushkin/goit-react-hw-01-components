@@ -4,9 +4,8 @@ export const CardUser = styled.div`
     padding: 8px;
     border: 2px solid #4E555F;
     max-width: 250px;
-    margin-left: auto;
-    margin-right: auto;
     border-radius: 8px;
+    margin: 20px auto;
 `;
 
 export const InfoUser = styled.div`
